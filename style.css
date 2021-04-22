@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #edd362;
+  font-family: roboto;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+input, input:focus{
+  padding: 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+
+input[type='text'] {
+  width: 450px;
+}
+
+.search-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  background: #3a2d65;
+  color: #fff;
+  font-size: 14px;
+  padding: 15px 25px;
+  margin: 0;
+
+}
+
+.search-btn span{
+  font-size: 16px;
+  line-height: 24px;
+}
+
+
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  grid-gap: 40px;
+  margin-top: 20px;
+}
+
+.meal {
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: -5px 5px 10px 5px rgba(0,0,0,0.16)
+  ;
+
+}
+
+.meal img {
+  height: 300px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.meal h3 {
+  color: #000;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+
+
+
+
+.single-meal {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.single-meal img {
+  width: 300px;
+  margin: 15px;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+
+.single-meal-info {
+  margin: 20px;
+  padding: 10px;
+  border: 2px #3a2d65 dotted;
+  border-radius: 5px;
+}
+.single-meal-info p{
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.main p{
+  color: #666;
+}
+
+.main h2{
+  color: #3a2d65;
+}
+
+.single-meal h1{
+  color: #3a2d65;
+
+}
+
+.single-meal p {
+  margin: o;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.single-meal ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.single-meal ul li {
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+  color: #2d2013;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 0 5px 5px 0;
+}
+
+@media (max-width: 800px) {
+  .meals {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .meals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .meal {
+    height: 200px;
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  input[type='text'] {
+    width: 100%;
+  }
+
+  .meals {
+    grid-template-columns: 1fr;
+  }
+
+  .meal {
+    height: 300px;
+    width: 300px;
+  }
+}
