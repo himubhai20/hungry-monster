@@ -14,6 +14,8 @@ function searchMeal(e) {
   // Get search term
   const term = search.value;
 
+
+
   // Check for empty
   if (term.trim()) {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
@@ -21,6 +23,9 @@ function searchMeal(e) {
       .then(data => {
         console.log(data);
         resultHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
+
+
+
 
         if (data.meals === null) {
           resultHeading.innerHTML = `<p>There are no search results. Try again!😀<p>`;
@@ -112,7 +117,8 @@ mealsEl.addEventListener('click', e => {
   const mealInfo = e.path.find(item => {
     if (item.classList) {
       return item.classList.contains('meal-info');
-    } else {
+    } 
+    else {
       return false;
     }
   });
